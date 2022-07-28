@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS uyga vazifa</title>
+
+    <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+
+       body {
+            background-color: rgba(243, 180, 8, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 24px;
+            transition: all .4s linear;
+            animation:  infinite;
+            animation-name: backgroundColor;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear
+       }
+
+       .img {
+            width: 100%;
+            max-width: 600px;
+       }
+
+       .text {
+        width: 100%;
+        max-width: 680px;
+        margin-top: 30px;
+        font-family: cursive;
+        font-size: 30px;
+        text-align: center;
+       }
+
+       .btn {
+           width: 100%;
+           max-width: 200px;
+           display: inline-block;
+           margin-top: 20px;
+           padding: 20px 30px;
+           font-family: cursive;
+           font-size: 20px;
+           border: none;
+           background-color: rgba(0, 128, 0, 0.559);
+           color: #fff;
+           border-radius: 50px;
+           transition: all .4s linear;
+           cursor: pointer;
+       }
+
+       .btn:hover {
+            background-color: rgba(0, 128, 0, 1);
+       } 
+
+       @media (max-width:574px) {
+            .text {
+                font-size: 20px;
+            }
+
+            .btn {
+                font-size: 15px;
+            }
+       }
+
+       @keyframes backgroundColor{
+        0%   {background-color: rgba(243, 180, 8, 0.2);}
+        10%  {background-color: rgba(102, 243, 8, 0.4);}
+        20%  {background-color: rgba(8, 243, 86, 0.6);}
+        30% {background-color: rgba(8, 243, 145, 0.6);}
+        40%   {background-color: rgba(8, 243, 192, 0.4);}
+        50%  {background-color: rgba(8, 227, 243, 0.2);}
+        60%  {background-color: rgba(8, 82, 243, 0.2);}
+        70% {background-color: rgba(169, 8, 243, 0.4);}
+        80%  {background-color: rgba(223, 8, 243, 0.6);}
+        90% {background-color: rgba(243, 8, 126, 0.4);}
+        100% {background-color: rgba(243, 141, 8, 0.2);}
+       }
+    </style>
+</head>
+<body>
+    <img class="img" src="./ppprunckrvwqqfhcgedjwxz9jwu-xl.jpg" alt="" width="100">
+    <p class="text">
+        Assalomu alaykum hush kelibsiz bizning sizga bir qancha savollarimiz bor iloji bo'lsa javobingiz kutib qolamiz
+    </p>
+    <button class="btn" class="button">BOSHLASH</button>
+
+
+
+    <script>
+        let btn = document.querySelector(".btn");
+
+        btn.addEventListener("click", () => {
+            let firstName = prompt("Ismingiz nima"),
+            lastName = prompt("Familiyangiz nima"),
+            birthDate = prompt("Tug'ulgan vaqtingiz"),
+            contry = prompt("Tug'ulgan yurtingiz"),
+            sity = prompt("Shaxringiz"),
+            job = prompt("Kasbingiz"),
+            hobby = prompt("Hobbyingiz"),
+            book = prompt("Yoqtirgan kitobingiz"),
+            text2 = prompt("Dasturlashga qiziqasizmi"),
+            text3 = prompt("Qaysi dasturlash tillarini bilasiz"),
+            text4 = prompt("Qaysi dasturlash tilini yoqtirasiz"),
+            text5 = prompt("Dasturlash bo'yicha qayerda taxsil olgasiz"),
+            text6 = prompt("Dasturlash soxasida qancha vaqt o'qigansiz"),
+            text8 =alert("Javoblaringiz uchun kattakon raxmat");
+
+            console.log(`
+                Ismingiz: ${firstName}
+                Familiyangiz: ${lastName}
+                Tug'ulgan vaqtingiz: ${birthDate}
+                Tug'ulgan yurtingiz: ${contry}
+                Shaxringiz: ${sity}
+                Kasbingiz: ${job}
+                Hobbyingiz: ${hobby}
+                Yoqtirgan kitobingiz: ${book}
+                Dasturlashga qiziqasizmi: ${text2}
+                Qaysi dasturlash tillarini bilasiz: ${text3}
+                Qaysi dasturlash tilini yoqtirasiz: ${text4}
+                Dasturlash bo'yicha qayerda taxsil olgasiz: ${text5}
+                Dasturlash soxasida qancha vaqt o'qigansiz: ${text6}
+            `)
+        })
+    </script>
+</body>
+</html>
